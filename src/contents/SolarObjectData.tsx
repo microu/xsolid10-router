@@ -10,12 +10,13 @@ const SolarObjectData: Component<TProps> = () => {
   const data = createMemo(() => findObject(params.ename));
 
   const fallback = () => <div>Waiting {params.ename}[...]</div>;
+  console.log("Generate SolarObjectData", params.ename);
 
   return (
     <Suspense fallback={fallback()}>
       <Show when={data() != undefined}>
         <h2>Data for {data()!.eName}</h2>
-        <pre>{JSON.stringify(data()!, null,2)}</pre>
+        <pre>{JSON.stringify(data()!, null, 2)}</pre>
       </Show>
     </Suspense>
   );

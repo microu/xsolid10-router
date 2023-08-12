@@ -13,6 +13,7 @@ const SolarObjectDescription: Component<TProps> = () => {
   const fallback = () => <div>Waiting {params.ename}[...]</div>;
 
   return (
+
     <Suspense fallback={fallback()}>
       <Show when={data() != undefined}>
         <h2>Description of {data()!.eName}.</h2>
