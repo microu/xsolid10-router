@@ -1,0 +1,97 @@
+@import "./reset.css";
+
+root {
+  background-color: #666;
+}
+
+#main {
+  max-width: 1024px;
+  margin: 0 auto;
+  background-color: #100000;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: #eee;
+  min-height: 100vh;
+}
+
+#banner {
+  padding: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid darkorange;
+}
+
+.logo:hover {
+  filter: drop-shadow(0.3em 0.3em 1em pink);
+}
+
+.logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+#banner-title {
+  border-radius: 0.5rem;
+  border-width: 0 2px 0 2px;
+  padding: 0.5rem;
+  background-color: #411;
+}
+
+#banner-title h2 {
+  font-size: 1.3rem;
+  letter-spacing: 0.25rem;
+}
+
+#main-content {
+  background-color: #100000;
+}
+
+button.counter {
+  border: none;
+  border-radius: 0.2rem;
+  background-color: pink;
+  font-weight: bold;
+  display:block;
+  margin:.5rem auto;
+  min-width: 8rem;
+  text-align: center;
+}
+.navbar {
+  width: 100%;
+  background-color: burlywood;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  border-bottom: 3px solid darkorange;
+}
+
+.navbar a {
+  padding: 0.1rem 0.3rem;
+  background-color: #666;
+  cursor: pointer;
+  user-select: none;
+}
+
+
+.navbar  a.active {
+  color:#411;
+  background-color: #999;
+  font-weight: bold;
+}
+
+ul.solar-objects {
+  padding: .5rem;
+  list-style: none;
+  display: flex;
+  gap: .3rem;
+  flex-wrap: wrap;
+}
+
+ul.solar-objects li {
+  padding: 0.2rem;
+  border-radius: 0.5rem;
+  background-color: pink;
+  color: darkred;
+}
