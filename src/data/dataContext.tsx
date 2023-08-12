@@ -9,6 +9,7 @@ export type TSolarSystemObject = {
 
 export type TDataContext = {
   solarSystemData: Resource<TSolarSystemObject[]>;
+  findObject(eName: string): TSolarSystemObject | undefined;
 };
 
 async function fetchSolarSystemData() {
@@ -19,8 +20,21 @@ async function fetchSolarSystemData() {
   return jsonData;
 }
 
-export function buildDataContext() {
+export function buildDataContext(): TDataContext {
   const [solarSystemData] = createResource(fetchSolarSystemData);
 
-  return { solarSystemData };
+  const objectData = (eName: string) => {
+    const data = solarSystemData();
+    const index =
+      data == undefined
+        ? -1
+        : data.findIndex((obj: TSolarSystemObject) => obj.eName == eName);
+    if (index >= 0) {
+      return data![index];
+    } else {
+      return undefined;
+    }
+  };
+
+  return { solarSystemData, findObject: objectData };
 }

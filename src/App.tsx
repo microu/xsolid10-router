@@ -14,7 +14,7 @@ function App() {
     { label: "Counter B", href: "/counterb" },
     { label: "Counter C", href: "/counterc" },
     { label: "Solar system", href: "/solar-system" },
-    { label: "Earth", href: "/solar-object/Earth" },
+    { label: "Mars", href: "/solar-object/Mars/" },
     { label: "All the things", href: "/all/the/things" },
     { label: "All page.md", href: "/all/page.md" },
   ];
